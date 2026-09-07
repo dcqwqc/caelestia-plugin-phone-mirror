@@ -1,0 +1,15 @@
+{
+  "name": "PhoneMirror",
+  "version": "0.1.0",
+  "author": "dcqwqc",
+  "icon": "smartphone",
+  "description": "Mirror an Android handset over wireless ADB from a quick toggle, with a guided pairing flow.",
+  "entryPoints": [
+    {
+      "type": "quick-toggle",
+      "source": "toggles/PhoneToggle.qml",
+      "properties": { "name": "phone" }
+    }
+  ],
+  "settings": "Settings.qml"
+}
