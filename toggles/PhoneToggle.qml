@@ -1,7 +1,7 @@
 import QtQuick
 import qs.components.controls
 import qs.services
-import "../services" as PhoneMirror
+import dcqwqc.phonemirror.services as PhoneMirror
 
 // Quick toggle for the scrcpy mirror.
 //
@@ -11,6 +11,9 @@ import "../services" as PhoneMirror
 IconButton {
     // No handset configured yet: offer the pairing workflow rather than
     // pretending to be a switch over nothing.
+    // The shell used to special-case this id in its toggle filter. A
+    // plugin answers for itself: no launcher on this machine, no toggle.
+    visible: PhoneMirror.Phone.available
     icon: PhoneMirror.Phone.configured ? "smartphone" : "phonelink_setup"
     checked: PhoneMirror.Phone.running || PhoneMirror.Phone.connecting
     isToggle: PhoneMirror.Phone.configured

@@ -1,2 +1,0 @@
-module PhoneMirror.Services
-singleton Phone 1.0 Phone.qml
